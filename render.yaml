@@ -1,0 +1,13 @@
+services:
+    - type: web
+      name: jobly-frontend
+      env: node
+      buildCommand: npm install && npm run build
+      startCommand: npm run preview
+      envVars:
+          - key: NODE_VERSION
+            value: 18.20.0
+          - key: NODE_ENV
+            value: production
+          - key: REACT_APP_BASE_URL
+            value: https://jobly-backend-ts52.onrender.com
